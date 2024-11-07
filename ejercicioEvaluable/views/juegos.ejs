@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%= title %> <!-- Inserta el valor de `title` proporcionado desde el controlador -->
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' /> <!-- Vincula el archivo CSS para aplicar estilos -->
+</head>
+<body>
+    <h1>
+        <%= title %> <!-- Muestra el título en la cabecera (h1) -->
+    </h1>
+    <p>Welcome to <%= title %> <!-- Saludo dinámico, insertando el título -->
+    </p>
+    <p>hola que tal? es la galeria de juegos</p>
+    
+    <!-- Tabla que muestra los datos de cada juego -->
+    <table border="1">
+        <!-- Uso de etiquetas EJS <% %> para delimitar el código de JavaScript dentro del HTML -->
+        
+        <% juegos.forEach(juego => { %> <!-- Itera sobre el array `juegos` pasado desde el controlador -->
+            <tr>
+                <td><%= juego.id %></td> <!-- Muestra el ID del juego -->
+                <td><a href="/juegos/<%= juego.id %>"><%= juego.nombre %></a></td> <!-- Enlace al juego individual -->
+                <td><%= juego.nombre %></td> <!-- Muestra el nombre del juego -->
+                <td><%= juego.fecha_de_venta %></td> <!-- Muestra la fecha de venta -->
+                <td><%= juego.compania %></td> <!-- Muestra la compañía desarrolladora -->
+                <td><%= juego.genero %></td> <!-- Muestra el género del juego -->
+                <td><img src="<%= juego.enlace_portada %>" alt="<%= juego.nombre %> portada" width="100"></td> <!-- Muestra la imagen de portada del juego -->
+            </tr>
+        <% }) %> <!-- Cierra el bucle `forEach` después de iterar por todos los elementos -->
+    </table>
+</body>
+</html>
