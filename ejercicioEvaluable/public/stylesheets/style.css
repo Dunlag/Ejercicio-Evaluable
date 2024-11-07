@@ -1,5 +1,12 @@
+@import url(./juegos.css);
+@import url(./juego.css);
+@import url(./home.css);
+@import url(./normalize.css);
+
 body {
-  padding: 50px;
+/*   padding: 0;
+  margin: 0;
+  box-sizing: border-box; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 

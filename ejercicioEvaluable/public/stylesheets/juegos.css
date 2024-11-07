@@ -1,0 +1,42 @@
+/* Contenedor de la cuadrícula de tarjetas */
+.tarjetas_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta */
+.tarjeta {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+/* Imagen de la tarjeta */
+.tarjeta_imagen {
+    width: 100%;
+    height: auto;
+}
+
+/* Contenido de la tarjeta */
+.tarjeta_datos {
+    padding: 15px;
+}
+
+.tarjeta h2 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+}
+
+.tarjeta p {
+    margin: 5px 0;
+}
+
+/* Añadir efecto al pasar el mouse */
+.tarjeta:hover {
+    transform: translateY(-5px);
+}

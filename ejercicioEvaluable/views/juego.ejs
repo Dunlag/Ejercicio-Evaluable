@@ -7,26 +7,21 @@
     <link rel='stylesheet' href='/stylesheets/style.css' /> <!-- Vincula el archivo CSS para los estilos -->
 </head>
 <body>
-    <h1>
-        <%= title %> <!-- Muestra el título en la cabecera (h1) -->
-    </h1>
-    <p>Welcome to <%= title %> <!-- Mensaje de bienvenida con el título dinámico -->
-    </p>
-    <p>hola que tal? es la galeria de juegos</p>
+    <!-- Incluye el header -->
+    <%- include('partials/header') %>
     
-    <!-- Muestra los detalles específicos del juego -->
-    <h1><%= juego.nombre %> </h1> <!-- Título con el nombre del juego -->
-    <p><%= juego.compania %></p> <!-- Muestra la compañía que desarrolló el juego -->
-
-    <!-- Muestra la imagen de portada del juego -->
-    <figure>
-        <img src="<%= juego.enlace_portada %>" alt="<%= juego.nombre %> portada">
-    </figure>
-    
-    <!-- Muestra el género del juego como pie de foto de la portada -->
-    <figcaption><%= juego.genero %></figcaption>
-    
-    <!-- Muestra la fecha de venta del juego -->
-    <p><%= juego.fecha_de_venta %> </p>
+    <!-- Contenedor de la tarjeta individual del juego con dos columnas -->
+    <div class="tarjeta_juego">
+        <div class="tarjeta_juego_imagenes">
+            <img src="<%= juego.enlace_portada %>" alt="<%= juego.nombre %> portada" class="juego_imagen">
+        </div>
+        <div class="tarjeta_juego_datos">
+            <h2><%= juego.nombre %></h2> <!-- Muestra el nombre del juego -->
+            <p><strong>Compañía:</strong> <%= juego.compania %></p> <!-- Muestra la compañía desarrolladora -->
+            <p><strong>Género:</strong> <%= juego.genero %></p> <!-- Muestra el género del juego -->
+            <p><strong>Fecha de Venta:</strong> <%= juego.fecha_de_venta %></p> <!-- Muestra la fecha de venta -->
+        </div>
+    </div>
+    <%- include('partials/footer') %>
 </body>
 </html>

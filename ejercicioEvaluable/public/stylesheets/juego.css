@@ -1,0 +1,44 @@
+/* Contenedor de la tarjeta de detalles del juego, estilo en dos columnas */
+.tarjeta_juego {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: una para la imagen y otra para el contenido */
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Estilo para la columna de la imagen */
+.tarjeta_juego_imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.juego_imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para la columna del contenido */
+.tarjeta_juego_datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.tarjeta_juego_datos h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.tarjeta_juego_datos p {
+    font-size: 1em;
+    margin: 8px 0;
+}
