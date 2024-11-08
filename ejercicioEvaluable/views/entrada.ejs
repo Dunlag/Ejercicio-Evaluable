@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= entrada.title %>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <%- include('partials/header') %>
+    <section class="principal">
+
+    <img src="<%= entrada.image %>" alt="<%= entrada.title %> portada" class="imagen">
+    <h1><%= entrada.title %></h1>
+    <p><%= entrada.intro %></p>
+    <a href="#"> <%= entrada.category %></a>
+    <p class="parrafo"><%- entrada.content %></p>
+</section>
+
+<footer class="footer">
+    <p>&copy; Creado por Fernando Pinilla Valbuena</p>
+</footer>
+
+</body>
+
+</html>

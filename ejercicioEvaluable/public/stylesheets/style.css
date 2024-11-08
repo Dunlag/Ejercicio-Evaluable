@@ -1,25 +1,51 @@
-@import url(./juegos.css);
-@import url(./juego.css);
+@import url(./entradas.css);
+@import url(./entrada.css);
 @import url(./home.css);
-@import url(./normalize.css);
 
 body {
-/*   padding: 0;
-  margin: 0;
-  box-sizing: border-box; */
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px sans-serif;
   max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header{
-  max-width: 90%;
+.header {
+  background-image: url(https://images.pexels.com/photos/29040524/pexels-photo-29040524/free-photo-of-arquitectura-rustica-de-piedra-en-ibiza-con-plantas-de-agave.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  height: 12rem;
+  max-width: 100%;
   margin: 0 auto;
+  padding-bottom: 1.5rem;
+}
+.titulo_cabecera {
+  font-size: 3rem;
+  padding-left: 1rem;
+}
+.parrafo_titulo {
+  font-size: 2rem;
+  padding-left: 1rem;
 }
 
-.footer{
+.navegacion {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 4rem;
+}
+
+.footer {
+  max-width: 100%;
+  padding: 2rem;
+  background-color: black;
+  color: aliceblue;
   text-align: center;
+}
+.navegacion_a {
+  color: white;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
+  text-decoration: none;
+  padding-left: 1.5rem;
 }

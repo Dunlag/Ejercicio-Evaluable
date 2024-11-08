@@ -1,0 +1,12 @@
+.imagen{
+    height: 400px;
+    width: 800px;
+}
+.principal{
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.parrafo{
+    text-align: left;
+}

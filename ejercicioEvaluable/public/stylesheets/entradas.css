@@ -1,0 +1,41 @@
+.titulo{
+    text-align: center;
+}
+
+.container{
+    height: 80vh;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.tarjetas_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+  }
+  
+  .tarjeta {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .tarjeta_imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .tarjeta h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  
+  .tarjeta p {
+    padding: 0 10px;
+  }
+  
