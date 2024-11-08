@@ -10,20 +10,45 @@
 
 <body>
   <%- include('partials/header') %>
-    <section class="cta">
-      <div>
-        <p>Welcome to <%= title %>
-        </p>
-        <h1 class="titulo">
-          <%= title %>
-        </h1>
-      </div>
-      <div class="cta_img">
-        <img src="https://picsum.photos/500" alt="" class="cta_imagen">
-      </div>
-    </section>
 
-    <%- include('partials/footer') %>
+  <section class="cta">
+    <div>
+      <p>Welcome to <%= title %></p>
+      <h1 class="titulo">
+        <%= title %>
+      </h1>
+    </div>
+    <div class="cta_img">
+      <img src="https://picsum.photos/500" alt="" class="cta_imagen">
+    </div>
+  </section>
+
+  <!-- Botón para abrir el diálogo -->
+  <button id="openDialogBtn">Ver más información</button>
+
+  <!-- Diálogo -->
+  <dialog id="infoDialog">
+    <h2>Información adicional</h2>
+    <p>Este es un cuadro de diálogo donde puedes mostrar más detalles sobre el contenido de esta página.</p>
+    <button id="closeDialogBtn">Cerrar</button>
+  </dialog>
+
+  <%- include('partials/footer') %>
+
+  <script>
+    // JavaScript para abrir y cerrar el diálogo
+    const dialog = document.getElementById('infoDialog');
+    const openDialogBtn = document.getElementById('openDialogBtn');
+    const closeDialogBtn = document.getElementById('closeDialogBtn');
+
+    openDialogBtn.addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    closeDialogBtn.addEventListener('click', () => {
+      dialog.close();
+    });
+  </script>
 </body>
 
 </html>
